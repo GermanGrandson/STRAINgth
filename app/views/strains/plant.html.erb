@@ -1,0 +1,60 @@
+
+<% @strains.each do |strain| %>
+  <div class="header-name">
+    <h1 class="name"><%= strain["name"] %></h1>
+  </div>
+  <div class="flex-container return">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Return to symptons
+        <span class="caret"></span>
+      </button>
+    <ul class="dropdown-menu dropdown-menu-right move" aria-labelledby="dropdownMenu1">
+      <ul class="list-unstyled">
+        <li><%= link_to "Anxiety", "/strains/anxiety" %></li>
+        <li><%= link_to "Calming", "/strains/calming" %></li>
+        <li><%= link_to "Pain relief", "/strains/numbness" %></li>
+        <li><%= link_to "Appetite Gain", "/strains/appetite_gain" %></li>
+      </ul>
+    </ul>
+    </div>
+  </div>
+<div class="flex-container">
+    <div class="profile">
+      <div class="show-strains">
+          <div class="image">
+          <img class="img-thumbnail" <%= image_tag strain["image"] %>
+          </div>
+          <br>
+          <div class="qr-code">
+            <h3>Scan QR for further information:</h3>
+              <%= image_tag strain["qr"] %>
+          </div>
+      </div>
+
+      <div class="show-strains info">
+
+        <h1>Lineage:</h1>
+          <% strain["lineage"].each do |k, v| %>
+          <%= "#{k}" %>
+          <br>
+
+          <% end %>
+
+        <h1>Characteristics:</h1>
+          <% strain["symptoms"].each do |k, v| %>
+          <%= "#{k.capitalize} - #{v.to_f.round(2)}" %>
+          <br>
+          <% end %>
+
+        <h1>Also Known As:</h1>
+          <% a = strain["genetics"] %>
+            <% b = a.values[0]  %>
+            <%= "#{b.gsub(/\//, ",")}" unless b.eql?(false)%>
+      </div>
+  
+    <% end %>
+
+  </div>
+
+</div>

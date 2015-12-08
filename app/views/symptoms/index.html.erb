@@ -1,0 +1,28 @@
+
+<div class="container unique">
+  <div class="heading">
+    <div class="col-md4 header-symptoms">
+      <h1>An alternative way of medicine, aiding your needs. </h1>
+    </div>
+  </div>
+  <div class="intro-menu">
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Choose a sympton
+        <span class="caret"></span>
+      </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="centerlist">
+            <ul class="list-unstyled" >
+              <li><%= link_to "Anxiety", "strains/anxiety" %></li>
+              <li><%= link_to "Calming", "strains/calming" %></li>
+              <li><%= link_to "Pain relief", "strains/numbness" %></li>
+              <li><%= link_to "Appetite Gain", "strains/appetite_gain" %></li>
+            </ul>
+        </ul>
+      </div>
+  </div>
+</div>
+
+
+
+  <!-- <p><%= find_strains(@symptom) %></p> -->

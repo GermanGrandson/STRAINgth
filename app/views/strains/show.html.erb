@@ -1,0 +1,15 @@
+
+<div class="results-back">
+  <div class="background col-md-6">
+    <% @strains.each do |strain| %>
+      <div class="col-md-4" id="results">
+          <div class="show-strains">
+            <%= link_to strain["name"], '/plant/' + strain["ucpc"] %>
+          </div>
+      </div>
+    <% end %>
+  </div>
+ <div class="back">
+   <button class="btn btn-default" type="submit">
+     <%= link_to 'Back', root_path %>
+   </button>

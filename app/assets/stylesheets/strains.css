@@ -1,0 +1,148 @@
+
+/*background image*/
+body {
+  background-color: #E4FDE1;
+}
+.unique {
+  background-image:url(marijuana-leaf5.jpg);
+  /*background-repeat: no-repeat;*/
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
+  background-size: 110%, 170%;
+  padding: 200px;
+  /*opacity: .5;*/
+  min-height: 100%;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  /*left: 0;*/
+}
+
+/*intro page*/
+.header-symptoms {
+  background-color: white;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  padding-top: 0.25%;
+  /*margin: 5% 20% 0 20%;*/
+  height: 5%;
+}
+
+.logo {
+  font-family: 'Comfortaa', cursive;
+  font-size: 45px;
+}
+
+/*intro button menu*/
+.intro-menu {
+  padding-top: 5%;
+  text-align: center;
+}
+
+/*intro dropdown list menu*/
+#centerlist {
+  text-align: center;
+  left: 50%;
+  right: auto;
+  text-align: center;
+  transform: translate(-50%, 0);
+}
+
+.show-strains-info {
+font-family: Arial, Verdana;
+font-size: 1.1em;
+}
+
+.col-md-6 {
+background-color: #FFFFFF ;
+}
+
+/*show symptom background*/
+#results{
+  background-color: white;
+}
+
+.background {
+  margin: 2% 15% 0 15%;
+
+}
+
+/*strain profile container*/
+.flex-container {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  /*display: flex;*/
+  flex-flow: row wrap;
+}
+
+.return {
+  text-align: right;
+}
+
+.move {
+  text-align: center;
+}
+
+/*contains image and info*/
+.profile{
+  display: flex;
+  padding-bottom: 10%
+  /*text-align: center;*/
+  /*flex-flow: row;*/
+  /*justify-content: center;*/
+}
+
+/*strain image*/
+.show-strains {
+  flex: 1 0 50%;
+  height: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 1.3rem;
+}
+
+/*header name*/
+.header-name {
+  text-align: center;
+  background-color: white;
+  margin: 0 25% 0 25%;
+}
+/*Strain image*/
+img {
+  /*height: 50%;*/
+  width: 50%;
+  margin:0 auto;
+}
+.image{
+  width: 700px;
+}
+
+/*QR Code image*/
+qr-code {
+  text-align: left;
+  width: 50%;
+}
+.qr-code img{
+  width:20%;
+}
+
+/*results page text characteristics*/
+.info {
+  background-color: white;
+  text-align: left;
+  padding-left: 6%;
+  padding-bottom: 3%;
+}
+/*
+footer {
+  /*display: flex;*/
+  /*text-align: center;*/
+  /*list-style: none;
+  display: inline;
+
+}*/

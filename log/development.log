@@ -1,0 +1,4032 @@
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateDoctors (20151102235521)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "doctors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151102235521"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Migrating to DeviseCreateUsers (20151103002542)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (26.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151103002542"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2015-11-03 18:06:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (447.1ms)
+Completed 200 OK in 2837ms (Views: 2799.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-887c77a7e2975bbe59a0b93cedfaeebb500f4ff090946a48fe257f4685f5a444.css?body=1" for ::1 at 2015-11-03 18:06:16 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:06:16 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:28:37 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (372.8ms)
+Completed 200 OK in 968ms (Views: 960.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-46cee76d2840b3fb6c3e65e85025333533359b27e6f0f653e9f037c5e60c7158.css?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:28:38 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:28:39 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:28:54 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (245.8ms)
+Completed 200 OK in 359ms (Views: 358.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-f9438e1a97ef8869e79caf7f1228ecf1fdd26ddd4f1a140ff8b43ed05ad27236.css?body=1" for ::1 at 2015-11-03 18:28:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:28:54 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:28:54 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:28:54 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:28:54 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:28:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:28:55 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:28:55 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:28:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:28:55 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:28:55 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:28:55 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:29:05 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (302.8ms)
+Completed 200 OK in 388ms (Views: 387.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-ac352b959e969d31f53b1da6d5d1e162f058f3108f9c0dab5299ee22ab4e9191.css?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:29:05 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:29:21 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (297.4ms)
+Completed 200 OK in 464ms (Views: 463.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-da14cacdf8feccde51af439de906cef2b67ba21a4120ee38ab7f2484b3ab649f.css?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:29:22 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:29:46 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (285.2ms)
+Completed 200 OK in 384ms (Views: 383.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-84d3fc67cfb642e6ab65fab15155fd004bce9cdaf4680212cb188b0abfec1416.css?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:29:47 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:30:33 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (279.9ms)
+Completed 200 OK in 370ms (Views: 368.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-8448d5cfd83df2a43585915f825f68f53f693dfcfa9451aaa938d22c0b750b4f.css?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:30:34 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:30:47 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (272.4ms)
+Completed 200 OK in 469ms (Views: 468.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-80382e74195a94bc9c6f0a6704e2048b2fe675e0f60ae1b274240a10874a5c27.css?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:30:48 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:30:57 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (299.7ms)
+Completed 200 OK in 391ms (Views: 390.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-7c4401026807e8eea4f09d207e83018b508546ba4265e5ba225901e4ba8fd339.css?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:30:57 -0500
+
+
+Started GET "/assets/leaf4.png" for ::1 at 2015-11-03 18:30:58 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:34:50 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (512.0ms)
+Completed 200 OK in 1176ms (Views: 1172.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-0f78a373b02e5d705240783e49db643eda3c9c9821288a0957085dc3ac6aa53e.css?body=1" for ::1 at 2015-11-03 18:34:52 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:34:52 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:36:29 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:38:53 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (312.5ms)
+Completed 200 OK in 1065ms (Views: 1060.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-a89595ca91442a9dcd5c4654163c07da64a416a2c0643724f55db66cdec4b3ca.css?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:38:54 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:39:12 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (210.3ms)
+Completed 200 OK in 622ms (Views: 621.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-029079e7b3a569bb15a8c6540e0c5cfde3eb76e533910a988f99832c5facdc76.css?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:39:13 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:39:46 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:40:06 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (505.3ms)
+Completed 200 OK in 1082ms (Views: 1078.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-4bd1e02a6249bdc3f5e9d30bdd273cc5fd51d895563f157f6cd0823a80874432.css?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:40:08 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:40:09 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:40:23 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (312.3ms)
+Completed 200 OK in 420ms (Views: 419.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/strains.self-029079e7b3a569bb15a8c6540e0c5cfde3eb76e533910a988f99832c5facdc76.css?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:40:23 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:24 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:24 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:40:35 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (256.0ms)
+Completed 200 OK in 482ms (Views: 481.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-c20d807b5b5faf60a70c837b9b6d7d0466e9fd514801e65b0294e79e1e7225f9.css?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:40:36 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:40:49 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (303.1ms)
+Completed 200 OK in 402ms (Views: 401.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-f02e0450d658d88623ee51a9262dcd114490e7d7528f075e2c201356e61f76e2.css?body=1" for ::1 at 2015-11-03 18:40:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:40:49 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:40:49 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:40:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:40:49 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:40:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:40:50 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:50 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:50 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:40:50 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:40:50 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:40:57 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (621.4ms)
+Completed 200 OK in 742ms (Views: 741.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-3434e925b05681246c3af60ef6a991906c723c5a37a751c563d3ff07fd4ae83d.css?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/assets/marijuanaleaf4.jpg" for ::1 at 2015-11-03 18:40:58 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:42:40 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (247.8ms)
+Completed 200 OK in 898ms (Views: 894.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-f1ceb7c8bd20d8a59fc7edc256bf0c2b887bd9ea3cb122b9fbb1089e3010e51a.css?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:42:41 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:42:42 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:42:42 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:43:15 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (243.2ms)
+Completed 200 OK in 541ms (Views: 540.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/strains.self-b10706574382b21f75bd8a0af6ed64f20a017eb1bc7762dae60d1fb10c2d73d9.css?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:43:15 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:43:16 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:43:38 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (243.3ms)
+Completed 200 OK in 502ms (Views: 501.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-466d77a8acd5ad82165cec365bef9520c8abe661ec244a27e75dddea61c931cc.css?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:43:39 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:43:55 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (262.6ms)
+Completed 200 OK in 565ms (Views: 563.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-d8a6fdcbbb9cf5c82efd6e8726d6d09eb9f54fdc9f053f18ec27118f21bc3682.css?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:43:56 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:44:08 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (358.2ms)
+Completed 200 OK in 483ms (Views: 482.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/strains.self-c9fabfca6e8bd4d0f39f0fb946d6757a1097f2b9908439bbea5cd14bed3911ec.css?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:44:08 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:44:19 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (264.6ms)
+Completed 200 OK in 407ms (Views: 406.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-164380062edcb83f001b16662a3a8a05a7b4e39b09f8050a16f386d8d1d71c29.css?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:44:20 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:44:28 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (255.5ms)
+Completed 200 OK in 347ms (Views: 346.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-d9c975e764d9fa1407e8a06d83c90dde421bf4d7d40d4b12ff185aaba7174cec.css?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:44:29 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:44:52 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (214.7ms)
+Completed 200 OK in 328ms (Views: 327.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-14ddf5049da1e4cfa9fcc372a7f3258804376993e9aeaede3d8b47388ad2f047.css?body=1" for ::1 at 2015-11-03 18:44:52 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:44:52 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:44:52 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:44:52 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:44:52 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:44:52 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:44:52 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:53 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:44:53 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:44:53 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:44:53 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:45:01 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (220.0ms)
+Completed 200 OK in 323ms (Views: 322.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-e37a49fe4b33157e0996826527b9c5e1ec598a6cb61729cd84d18a9891791899.css?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:45:01 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:45:12 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (282.7ms)
+Completed 200 OK in 378ms (Views: 378.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-f3d9cc4048c31b8f8ed4571ce8314299fc20cbf0ff9298efe15b0f58c34cf498.css?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:45:13 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:45:24 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (233.2ms)
+Completed 200 OK in 485ms (Views: 483.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:45:24 -0500
+
+
+Started GET "/assets/strains.self-76193da1056dec067182321de589a86fb5064b71b71ff8afdca4dc32f00203a8.css?body=1" for ::1 at 2015-11-03 18:45:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:45:25 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:45:43 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (441.1ms)
+Completed 200 OK in 616ms (Views: 615.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-4adcf918499c9c9b3a22cd33e16fc94d66f84213d9ffe502226a56e7ce60a827.css?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:45:44 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:46:00 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (417.2ms)
+Completed 200 OK in 624ms (Views: 622.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-00292a843279e0787900a7763f473c5383fd02c6b0b62d50aaaf3fd97386da01.css?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:46:00 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:46:01 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:46:12 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (269.3ms)
+Completed 200 OK in 494ms (Views: 493.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-b34e4b146771fe4105c6943fd136b5e40230eb749d0d4a41798575f089f5315b.css?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:46:13 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:46:24 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (321.3ms)
+Completed 200 OK in 414ms (Views: 413.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-bfa55082f873610b4d4bf1ee047e469b515324a5cf8729d3f82825169fb7586b.css?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:46:24 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:46:36 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (246.0ms)
+Completed 200 OK in 409ms (Views: 408.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-31e0f000804bbcc7c5e1dcba8b6b1c262f1fde42d0cb12ce1944f85f05175084.css?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:46:37 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:46:46 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (500.1ms)
+Completed 200 OK in 605ms (Views: 604.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-9fa6264330793d2e99b4f457477f6e498fc0f4a34c6548c0db283a681ce1aa25.css?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:46:47 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:46:54 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (374.4ms)
+Completed 200 OK in 501ms (Views: 499.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-b461940da1746ae49efd597ba59534d3ab6aba1f3c960aa5b43a46bc85ff3978.css?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:46:55 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:47:02 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (255.0ms)
+Completed 200 OK in 369ms (Views: 368.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-034dd9a15b8f40a064814348a34738dd4cd76f7c79f1c145aae4eaf7a21d91b9.css?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:47:02 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:47:18 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (279.2ms)
+Completed 200 OK in 393ms (Views: 392.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-62a8732030ad7e4dc3cb5b44a9d69befe67c36e1c98219c3ea57420ab71e3126.css?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:47:19 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:47:33 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (330.0ms)
+Completed 200 OK in 422ms (Views: 421.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-cb1d8a50d03ed31fcafb96e5e467258d1b4286ba276aeb17d307673ce8c95ea4.css?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:47:34 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:47:49 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (286.2ms)
+Completed 200 OK in 386ms (Views: 385.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-4174fc706599b383d76c7143cec4da69b8889c003e5a9d58515e93d4573c0d14.css?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:47:49 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:47:58 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (252.2ms)
+Completed 200 OK in 343ms (Views: 342.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-395b524b49724d18ad2a65783c9bbdf1d454e0dbfa3afa10bc067875f4c4d8dc.css?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:47:58 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:48:10 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (392.6ms)
+Completed 200 OK in 535ms (Views: 534.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-11cc45671d3f6d23e2e8ccb659945a2cbf274ae4c662a52c5fe20fb06a03f3ee.css?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:48:10 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:48:16 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (290.9ms)
+Completed 200 OK in 385ms (Views: 384.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-074c53f31492f8ec7db471d07da93e0ff88aa8269107495fafe686e4f75f53cd.css?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:48:16 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:48:25 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (273.9ms)
+Completed 200 OK in 338ms (Views: 336.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:48:25 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:48:25 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:48:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/assets/strains.self-074c53f31492f8ec7db471d07da93e0ff88aa8269107495fafe686e4f75f53cd.css?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:48:26 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:48:29 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (361.8ms)
+Completed 200 OK in 558ms (Views: 557.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-86a7f55eca674e58cab920c5f8b935d1fff9d695dbe68eab703762541114d479.css?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:48:30 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:48:40 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (255.3ms)
+Completed 200 OK in 343ms (Views: 342.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-28ab724586b8d7e919e6b14d1c71b838147ee9afb7e68b5364bc0b9f752856ca.css?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:48:41 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:48:48 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (240.5ms)
+Completed 200 OK in 321ms (Views: 320.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-ddabf54385b2c0b3891d9882f4eb68df88369e9b121c2687d23504734eb6631b.css?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:48:49 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:49:04 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (341.4ms)
+Completed 200 OK in 483ms (Views: 481.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-cb181ccb54f6b6419a7d979f5968aab46d21b5ce838cc4b13e925d11bb357aa4.css?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:49:05 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:49:29 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (243.8ms)
+Completed 200 OK in 628ms (Views: 627.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-1d1dce4c429ac07c3ba1dbf8b7d0189710eca194b0e3b07fb88fc52ac70ca045.css?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:49:29 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:49:30 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:49:39 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (230.7ms)
+Completed 200 OK in 426ms (Views: 424.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-38c619d785b4d8ae37d9e6fb5a2ac085bb2134523d531f363914c3334970defa.css?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:49:40 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:49:46 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (247.4ms)
+Completed 200 OK in 369ms (Views: 368.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-314f242f995dcb82328eeef2671b9448001f93818cf79506e02b1ba06515533c.css?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:49:47 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:49:53 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (243.4ms)
+Completed 200 OK in 376ms (Views: 375.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-a0f92f7b2d5131a2bb13a6aabbe52c9bc446623db9f397d72e1c15771460b091.css?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:49:53 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:50:21 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (277.3ms)
+Completed 200 OK in 505ms (Views: 503.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-d4a41f00c61b6f1120329dcdfff7284a4f3fefe91bcf3224562daaa9c7dc0d12.css?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:50:22 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:50:31 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (254.6ms)
+Completed 200 OK in 472ms (Views: 470.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-a57ea3102c410bc3b3bb4b79cd5de38ac6bc45cf6f84b497367056a60cabd764.css?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:50:31 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:50:32 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:50:41 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (233.3ms)
+Completed 200 OK in 357ms (Views: 356.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-b436b7853a375428b227777f67742caa07f036a30a5de9902491b78377c40929.css?body=1" for ::1 at 2015-11-03 18:50:41 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:50:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:50:41 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:50:42 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:50:53 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (268.8ms)
+Completed 200 OK in 399ms (Views: 398.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-868b64d51fad8aa74d1e2df0ccbdb27f42ec9a11fbbd0bbf5593ba5dde73eddd.css?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:50:54 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:50:59 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (260.6ms)
+Completed 200 OK in 460ms (Views: 459.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-eaee2c4a3de75cba281620f9c546ab10c4b984d8b27e26003bfe699fe3ce923e.css?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:51:00 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:51:07 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (236.5ms)
+Completed 200 OK in 361ms (Views: 360.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-7dbc7bd376712fad39e18273fe673ee42845e39acb48d891b234ba0bcb86ed78.css?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:51:07 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:51:13 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (273.7ms)
+Completed 200 OK in 370ms (Views: 369.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-f8a4439170d00e67e2dd32358f0470625f3d6e43934c7e3a802047b0a2ea6f15.css?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:51:14 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:51:22 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (238.0ms)
+Completed 200 OK in 324ms (Views: 323.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 18:51:22 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:55:57 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (421.8ms)
+Completed 200 OK in 912ms (Views: 889.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:56:00 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:57:58 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (345.6ms)
+Completed 200 OK in 836ms (Views: 835.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:57:59 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:58:49 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (810.3ms)
+Completed 200 OK in 1026ms (Views: 1025.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:58:51 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 18:59:15 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (303.5ms)
+Completed 200 OK in 416ms (Views: 415.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 18:59:15 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 19:00:24 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (315.0ms)
+Completed 200 OK in 717ms (Views: 716.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:00:25 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 19:00:45 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (248.0ms)
+Completed 200 OK in 339ms (Views: 338.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:00:45 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 19:01:05 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (255.9ms)
+Completed 200 OK in 320ms (Views: 319.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:01:07 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (304.6ms)
+Completed 200 OK in 366ms (Views: 365.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:03:08 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (340.7ms)
+Completed 200 OK in 687ms (Views: 686.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:03:09 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 19:03:49 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (232.9ms)
+Completed 200 OK in 624ms (Views: 623.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:03:49 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:03:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:03:50 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 19:04:40 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (284.0ms)
+Completed 200 OK in 489ms (Views: 488.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:04:41 -0500
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:04:52 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 357ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/4PWKMFV6JW000000000000000" for ::1 at 2015-11-03 19:05:02 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"4PWKMFV6JW000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 602ms (Views: 119.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/CYGU94JYKY000000000000000" for ::1 at 2015-11-03 19:05:19 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"CYGU94JYKY000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 294ms (Views: 146.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:05:44 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (291.8ms)
+Completed 200 OK in 490ms (Views: 489.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:05:51 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 590ms (Views: 204.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/UVLGYRUFZT000000000000000" for ::1 at 2015-11-03 19:05:58 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"UVLGYRUFZT000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 225ms (Views: 61.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/2NGAWKHL3K000000000000000" for ::1 at 2015-11-03 19:06:04 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"2NGAWKHL3K000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 219ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:06:11 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (249.0ms)
+Completed 200 OK in 314ms (Views: 313.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:06:11 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:06:11 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:06:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:06:11 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:06:11 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:06:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:06:11 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:06:12 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:06:12 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:06:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:06:12 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 19:06:12 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-03 19:06:20 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 333ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/ZHMH7YD4WE000000000000000" for ::1 at 2015-11-03 19:06:33 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"ZHMH7YD4WE000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 193ms (Views: 62.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/AR6UQRWA6H000000000000000" for ::1 at 2015-11-03 19:06:44 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"AR6UQRWA6H000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 336ms (Views: 171.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:06:55 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (333.1ms)
+Completed 200 OK in 503ms (Views: 501.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:06:56 -0500
+
+
+Started GET "/strains/numbness" for ::1 at 2015-11-03 19:07:01 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"numbness"}
+  Rendered strains/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 327ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/ZHMH7VYQKJ000000000000000" for ::1 at 2015-11-03 19:07:04 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"ZHMH7VYQKJ000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 227ms (Views: 68.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/VUJCJ4TYMG000000000000000" for ::1 at 2015-11-03 19:07:12 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"VUJCJ4TYMG000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 228ms (Views: 79.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:07:26 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (255.5ms)
+Completed 200 OK in 402ms (Views: 401.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/appetite_gain" for ::1 at 2015-11-03 19:07:29 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"appetite_gain"}
+  Rendered strains/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 437ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/K3TYMGAN6Z000000000000000" for ::1 at 2015-11-03 19:07:42 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"K3TYMGAN6Z000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 289ms (Views: 75.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/UE24XDYZP2000000000000000" for ::1 at 2015-11-03 19:07:53 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"UE24XDYZP2000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 282ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/9XVU7WVM9J000000000000000" for ::1 at 2015-11-03 19:08:01 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"9XVU7WVM9J000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 226ms (Views: 66.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:08:41 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (411.1ms)
+Completed 200 OK in 656ms (Views: 654.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:08:45 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (267.4ms)
+Completed 200 OK in 325ms (Views: 324.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:08:45 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 19:08:46 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-03 19:09:13 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 524ms (Views: 178.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:09:29 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (254.7ms)
+Completed 200 OK in 413ms (Views: 412.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:09:29 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:09:30 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:09:30 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 19:09:30 -0500
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:09:32 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 336ms (Views: 86.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:09:48 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (281.2ms)
+Completed 200 OK in 343ms (Views: 342.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/numbness" for ::1 at 2015-11-03 19:09:51 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"numbness"}
+  Rendered strains/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 359ms (Views: 97.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/VUJCJ4TYMG000000000000000" for ::1 at 2015-11-03 19:10:03 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"VUJCJ4TYMG000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 327ms (Views: 171.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:10:08 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (265.7ms)
+Completed 200 OK in 325ms (Views: 324.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:10:11 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (257.7ms)
+Completed 200 OK in 332ms (Views: 331.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:10:12 -0500
+
+
+Started GET "/strains/appetite_gain" for ::1 at 2015-11-03 19:10:15 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"appetite_gain"}
+  Rendered strains/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 426ms (Views: 104.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/9XVU7WVM9J000000000000000" for ::1 at 2015-11-03 19:10:22 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"9XVU7WVM9J000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 216ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:10:29 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (261.6ms)
+Completed 200 OK in 329ms (Views: 327.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:10:32 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (335.8ms)
+Completed 200 OK in 402ms (Views: 401.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:10:33 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-03 19:10:34 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 353ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:10:36 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (241.2ms)
+Completed 200 OK in 298ms (Views: 297.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:10:38 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (269.5ms)
+Completed 200 OK in 324ms (Views: 323.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:10:38 -0500
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:10:41 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 363ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/9XVU7FNJZR000000000000000" for ::1 at 2015-11-03 19:10:43 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"9XVU7FNJZR000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 215ms (Views: 65.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:10:47 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (338.2ms)
+Completed 200 OK in 440ms (Views: 439.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:11:49 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (261.5ms)
+Completed 200 OK in 416ms (Views: 415.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:11:49 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:11:49 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:11:49 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:11:49 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:11:50 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:11:50 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:11:50 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:11:50 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:11:50 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:11:50 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:11:50 -0500
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:11:52 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 330ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/VUJCJ4TYMG000000000000000" for ::1 at 2015-11-03 19:11:54 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"VUJCJ4TYMG000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 212ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:12:20 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (236.7ms)
+Completed 200 OK in 306ms (Views: 305.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:12:21 -0500
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:12:24 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 331ms (Views: 97.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/VRTEW9D296000000000000000" for ::1 at 2015-11-03 19:12:26 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"VRTEW9D296000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 244ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-03 19:12:32 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 339ms (Views: 98.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:12:36 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (334.3ms)
+Completed 200 OK in 433ms (Views: 431.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/numbness" for ::1 at 2015-11-03 19:12:39 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"numbness"}
+  Rendered strains/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 392ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/CYGU94JYKY000000000000000" for ::1 at 2015-11-03 19:12:41 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"CYGU94JYKY000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 228ms (Views: 71.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/numbness" for ::1 at 2015-11-03 19:12:45 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"numbness"}
+  Rendered strains/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 338ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/M79TT7XYZX000000000000000" for ::1 at 2015-11-03 19:12:53 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"M79TT7XYZX000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 224ms (Views: 67.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:13:16 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (295.2ms)
+Completed 200 OK in 443ms (Views: 442.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-03 19:13:19 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 312ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/M79TT7XYZX000000000000000" for ::1 at 2015-11-03 19:13:21 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"M79TT7XYZX000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 221ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:13:24 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 302ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:13:31 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (270.5ms)
+Completed 200 OK in 329ms (Views: 327.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:16:39 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (327.0ms)
+Completed 200 OK in 576ms (Views: 574.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:19:36 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (335.7ms)
+Completed 200 OK in 767ms (Views: 765.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:19:37 -0500
+
+
+Started GET "/" for ::1 at 2015-11-03 19:19:42 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (244.3ms)
+Completed 200 OK in 301ms (Views: 300.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:19:42 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-03 19:21:12 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 546ms (Views: 278.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/UVLGYRUFZT000000000000000" for ::1 at 2015-11-03 19:21:22 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"UVLGYRUFZT000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 235ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-03 19:21:49 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 414ms (Views: 148.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/2NGAWKHL3K000000000000000" for ::1 at 2015-11-03 19:21:53 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"2NGAWKHL3K000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 239ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/numbness" for ::1 at 2015-11-03 19:22:07 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"numbness"}
+  Rendered strains/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 425ms (Views: 159.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/VUJCJ4TYMG000000000000000" for ::1 at 2015-11-03 19:22:11 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"VUJCJ4TYMG000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 214ms (Views: 63.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/appetite_gain" for ::1 at 2015-11-03 19:22:21 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"appetite_gain"}
+  Rendered strains/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 431ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/9XVU7WVM9J000000000000000" for ::1 at 2015-11-03 19:22:25 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"9XVU7WVM9J000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 234ms (Views: 74.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:22:38 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (287.1ms)
+Completed 200 OK in 436ms (Views: 435.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-03 19:52:56 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (656.6ms)
+Completed 200 OK in 1357ms (Views: 1296.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-03 19:52:58 -0500
+
+
+Started GET "/" for ::1 at 2015-11-04 12:16:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (506.8ms)
+Completed 200 OK in 1166ms (Views: 1132.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-04 12:16:01 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-04 12:20:41 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 929ms (Views: 613.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/UVLGYRUFZT000000000000000" for ::1 at 2015-11-04 12:20:45 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"UVLGYRUFZT000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 371ms (Views: 144.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-04 12:20:56 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 568ms (Views: 361.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/2NGAWKHL3K000000000000000" for ::1 at 2015-11-04 12:21:01 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"2NGAWKHL3K000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 279ms (Views: 154.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/numbness" for ::1 at 2015-11-04 12:21:11 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"numbness"}
+  Rendered strains/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 508ms (Views: 131.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/VUJCJ4TYMG000000000000000" for ::1 at 2015-11-04 12:21:15 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"VUJCJ4TYMG000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 398ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/appetite_gain" for ::1 at 2015-11-04 12:21:24 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"appetite_gain"}
+  Rendered strains/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 395ms (Views: 111.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/9XVU7WVM9J000000000000000" for ::1 at 2015-11-04 12:21:29 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"9XVU7WVM9J000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 216ms (Views: 77.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-04 12:21:40 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (278.7ms)
+Completed 200 OK in 394ms (Views: 392.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 23:56:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (1840.0ms)
+Completed 200 OK in 2378ms (Views: 2344.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-11-09 23:56:24 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-09 23:56:25 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-09 23:57:43 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 778ms (Views: 104.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-09 23:58:01 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (601.7ms)
+Completed 200 OK in 670ms (Views: 668.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-09 23:58:09 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 900ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/UE24XDYZP2000000000000000" for ::1 at 2015-11-09 23:58:15 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"UE24XDYZP2000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 252ms (Views: 92.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 09:42:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (316.2ms)
+Completed 200 OK in 987ms (Views: 954.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-12 09:42:54 -0500
+
+
+Started GET "/strains/calming" for ::1 at 2015-11-12 09:45:19 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 676ms (Views: 464.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 22:17:59 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (307.1ms)
+Completed 200 OK in 967ms (Views: 942.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-12 22:18:00 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (298.3ms)
+Completed 200 OK in 408ms (Views: 406.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-11-12 22:18:01 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-11-12 22:18:14 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 360ms (Views: 81.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/9XVU7MGYHH000000000000000" for ::1 at 2015-11-12 22:18:19 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"9XVU7MGYHH000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 266ms (Views: 95.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-08 13:58:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (419.6ms)
+Completed 200 OK in 1084ms (Views: 1051.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-12-08 13:58:59 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-08 13:58:59 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-08 13:58:59 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-12-08 13:59:00 -0500
+
+
+Started GET "/strains/anxiety" for ::1 at 2015-12-08 13:59:12 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"anxiety"}
+  Rendered strains/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 502ms (Views: 120.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/CYGU94JYKY000000000000000" for ::1 at 2015-12-08 13:59:16 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"CYGU94JYKY000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 191ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/calming" for ::1 at 2015-12-08 14:00:10 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"calming"}
+  Rendered strains/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 330ms (Views: 134.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-08 14:00:15 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (236.6ms)
+Completed 200 OK in 295ms (Views: 294.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/normalize.self-333ce827f60870acbaa5a751d49889465ce84697ee03980558f7d38405f670da.css?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/symptoms.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/strains.self-77351cd232fee2b0c3ebf0e3a7d4e1acc21a89a3e5e900188a3bc235fc914bb1.css?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/strains.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/strains/index.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/symptoms.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-12-08 14:00:15 -0500
+
+
+Started GET "/strains/numbness" for ::1 at 2015-12-08 14:00:18 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"numbness"}
+  Rendered strains/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 303ms (Views: 79.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-08 14:00:20 -0500
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (216.5ms)
+Completed 200 OK in 288ms (Views: 287.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/strains/appetite_gain" for ::1 at 2015-12-08 14:00:22 -0500
+Processing by StrainsController#show as HTML
+  Parameters: {"id"=>"appetite_gain"}
+  Rendered strains/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 251ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/2FDGYRNRJN000000000000000" for ::1 at 2015-12-08 14:00:23 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"2FDGYRNRJN000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 196ms (Views: 67.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/HZU7PPKWNW000000000000000" for ::1 at 2015-12-08 14:00:28 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"HZU7PPKWNW000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 194ms (Views: 73.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plant/9XVU7WVM9J000000000000000" for ::1 at 2015-12-08 14:00:30 -0500
+Processing by StrainsController#plant as HTML
+  Parameters: {"ucpc"=>"9XVU7WVM9J000000000000000"}
+  Rendered strains/plant.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 213ms (Views: 67.8ms | ActiveRecord: 0.0ms)
