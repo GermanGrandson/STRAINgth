@@ -8,7 +8,6 @@ gem 'devise'
 group :development do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-  gem 'httparty'
   gem 'json'
 end
 
@@ -25,6 +24,8 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+
+gem 'httparty', '~> 0.13.7'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -36,6 +37,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+gem 'figaro', '~> 1.1', '>= 1.1.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

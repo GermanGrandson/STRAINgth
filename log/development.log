@@ -4030,3 +4030,13 @@ Processing by StrainsController#plant as HTML
   Parameters: {"ucpc"=>"9XVU7WVM9J000000000000000"}
   Rendered strains/plant.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 213ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-08 14:27:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SymptomsController#index as HTML
+  Rendered symptoms/index.html.erb within layouts/application (1286.0ms)
+Completed 200 OK in 2006ms (Views: 1973.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/marijuana-leaf5.jpg" for ::1 at 2015-12-08 14:27:57 -0500
