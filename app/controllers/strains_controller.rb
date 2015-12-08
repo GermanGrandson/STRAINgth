@@ -15,14 +15,12 @@ class StrainsController < ApplicationController
     puts params[:id]
     url = "http://api.leoqz.me/api/strains?symptom=" + params[:id]
     response = HTTParty.get(url)
-    # json_data = JSON.parse(response.body)
     @strains = response["data"]
   end
 
   def plant
     url = "http://api.leoqz.me/api/strain/" + params[:ucpc]
     response = HTTParty.get(url)
-    # json_data = JSON.parse(response.body)
     @strains = response["data"]
   end
 
