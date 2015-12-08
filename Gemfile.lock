@@ -59,8 +59,6 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.6.0)
-    figaro (1.1.1)
-      thor (~> 0.14)
     geocoder (1.2.12)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -171,13 +169,11 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
-  figaro (~> 1.1, >= 1.1.1)
   geocoder
   httparty (~> 0.13.7)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
-  json
   pg
   rails (= 4.2.4)
   rails_12factor
